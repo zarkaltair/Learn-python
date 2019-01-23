@@ -19,12 +19,3 @@ print(letters[2])
 list = [1, 2, 3]
 for var in list:
 	print(var)
-
-
-
-
-
-
-
-
-

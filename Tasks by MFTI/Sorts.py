@@ -47,6 +47,3 @@ if __name__ == '__main__':
 	test_sort(insort_sort)
 	test_sort(choise_sort)
 	test_sort(bubble_sort)
-
-
-

@@ -64,5 +64,3 @@ my_hero_2.show_hero()
 my_super_hero.show_hero()
 my_super_hero.make_magic()
 my_super_hero.show_hero()
-
-

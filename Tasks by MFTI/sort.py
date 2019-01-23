@@ -1,9 +1,9 @@
 # Сортировка слиянием образец
 
-def merge( A: list, B: list ):
-	C = [] * (len( A ) + len( B ) )
+def merge(A: list, B: list):
+	C = [] * (len(A) + len(B))
 	i = k = n = 0
-	while i < len( A ) and k < len( B ):
+	while i < len(A) and k < len(B):
 		if A[i] <= B[i]:
 			C[n] = A[i] 
 			i += 1 
@@ -22,20 +22,20 @@ def merge( A: list, B: list ):
 		n += 1
 	return C
 
-def merge_sort( A ):
-	if len( A ) <= 1:
+def merge_sort(A):
+	if len(A) <= 1:
 		return
-	middle = len( A ) // 2
-	L = [A[i] for i in range( 0, middle )]
-	R = [A[i] for i in range(middle, len( A ))]
-	merge_sort( L )
-	merge_sort( R )
-	C = merge( L, R )
-	for i in range(len( A )):
+	middle = len(A) // 2
+	L = [A[i] for i in range(0, middle)]
+	R = [A[i] for i in range(middle, len(A))]
+	merge_sort(L)
+	merge_sort(R)
+	C = merge(L, R)
+	for i in range(len(A)):
 		A[i] = C[i]
 
-# Сортировка Тони Хора (быстрая сортировка)
 
+# Сортировка Тони Хора (быстрая сортировка)
 def hoar_sort( A ):
 	if len(A) <= 1:
 		return
@@ -57,6 +57,7 @@ def hoar_sort( A ):
 		A[k] = x
 		k += 1
 
+
 def check.sorted( A, ascending=True):
 	'''Проверка отсортированности за О(len(A))'''
 	flag = True
@@ -66,6 +67,7 @@ def check.sorted( A, ascending=True):
 		flag = False
 		break
 	return flag
+
 
 # Реализация бинарного поиска в массиве
 # поиск левой границы
@@ -79,6 +81,7 @@ def left_bound( A, key ):
 		else:
 			right = middle
 	return left
+
 # поиск правой границы
 def right_bound( A, key ):
 	left = -1
